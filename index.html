@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound Blasters - Bamboo Sound Amplifier</title>
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3b945e; /* Earthy green */
-            --secondary-color: #8c593b; /* Bamboo brown */
-            --accent-color: #ffca28; /* Highlight */
-            --text-color: #333;
+            --primary-color: #4a7856; /* Darker natural green */
+            --secondary-color: #7b5e3b; /* Warm brown */
+            --accent-color: #e0c097; /* Soft bamboo yellow */
+            --text-color: #2e2e2e;
+            --hero-text-color: #d9a766; /* White for readability */
+            --background-color: #f4f0e6; /* Light natural beige background */
+            --section-bg-color: #ffffff; /* Off-white for sections */
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Nunito', sans-serif; /* Use Nunito for a natural, handcrafted feel */
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
         }
@@ -39,8 +44,8 @@
         nav {
             background-color: var(--secondary-color);
             padding: 10px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -66,7 +71,7 @@
         .hero {
             background: url('https://example.com/bamboo-bg.jpg') no-repeat center center/cover;
             padding: 60px 20px;
-            color: white;
+            color: var(--hero-text-color);
             text-align: center;
         }
 
@@ -104,7 +109,7 @@
 
         section {
             margin-bottom: 40px;
-            background-color: white;
+            background-color: var(--section-bg-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -145,6 +150,22 @@
             margin: 0;
         }
 
+        footer .social {
+            margin-top: 10px;
+        }
+
+        footer .social a {
+            color: white;
+            font-size: 1.2em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .social a:hover {
+            color: var(--accent-color);
+        }
+
         button {
             padding: 10px 20px;
             background-color: var(--primary-color);
@@ -158,16 +179,6 @@
 
         button:hover {
             background-color: var(--secondary-color);
-        }
-
-        input[type="email"], input[type="text"] {
-            padding: 12px;
-            margin: 10px 0;
-            width: 100%;
-            max-width: 400px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
         }
     </style>
 </head>
@@ -188,7 +199,7 @@
     <div class="hero">
         <h1>Bamboo Sound Amplifiers</h1>
         <p>Experience natural sound amplification with eco-friendly bamboo designs.</p>
-        <button onclick="window.location.href='#products'">Shop Now</button>
+        <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Shop Now</button>
     </div>
 
     <main>
@@ -200,19 +211,19 @@
         <section id="products">
             <h2>Our Products</h2>
             <div class="product">
-                <img src="https://example.com/bamboo-amplifier.jpg" alt="Bamboo Sound Amplifier">
+                <img src="https://www.instagram.com/p/DCHtuiwvJDZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Bamboo Sound Amplifier">
                 <p>Our bamboo sound amplifiers work without electricity, providing clear, amplified sound in any environment. Handmade with sustainable bamboo, they bring both functionality and style to your space.</p>
-                <button onclick="alert('Product added to cart!')">Add to Cart</button>
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Shop Now</button>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Interested in learning more about our products? Enter your email to receive updates:</p>
-            <form>
-                <input type="email" id="email" placeholder="Your email address">
-                <button type="submit">Subscribe</button>
-            </form>
+            <p>For inquiries, reach us via:</p>
+            <div>
+                <p>Email: <a href="mailto:soundblasters.emc@gmail.com">soundblasters.emc@gmail.com</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/soundblasters.emc/" target="_blank">@soundblasters.emc</a></p>
+            </div>
         </section>
     </main>
 
