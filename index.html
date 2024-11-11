@@ -12,13 +12,13 @@
             --secondary-color: #7b5e3b; /* Warm brown */
             --accent-color: #e0c097; /* Soft bamboo yellow */
             --text-color: #2e2e2e;
-            --hero-text-color: #d9a766; /* White for readability */
+            --hero-text-color: #d9a766;
             --background-color: #f4f0e6; /* Light natural beige background */
             --section-bg-color: #ffffff; /* Off-white for sections */
         }
 
         body {
-            font-family: 'Nunito', sans-serif; /* Use Nunito for a natural, handcrafted feel */
+            font-family: 'Nunito', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
@@ -139,6 +139,23 @@
             border-radius: 10px;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -192,6 +209,7 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#products">Products</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -211,9 +229,20 @@
         <section id="products">
             <h2>Our Products</h2>
             <div class="product">
-                <img src=bamboo.jpeg>
+                <img src="bamboo.jpeg" alt="Bamboo Sound Amplifier">
                 <p>Our bamboo sound amplifiers work without electricity, providing clear, amplified sound in any environment. Handmade with sustainable bamboo, they bring both functionality and style to your space.</p>
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Shop Now</button>
+            </div>
+        </section>
+          <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="bamboo1.jpeg" alt="Bamboo Amplifier Model 1">
+                <img src="bamboo2.jpeg" alt="Bamboo Amplifier Model 2">
+                <img src="bamboo3.jpeg" alt="Bamboo Amplifier Model 3">
+                <img src="bamboo4.jpeg" alt="Bamboo Amplifier Model 4">
+                <img src="bamboo5.jpeg" alt="Bamboo Amplifier Model 5">
+                <img src="bamboo6.jpeg" alt="Bamboo Amplifier Model 6">
             </div>
         </section>
 
@@ -229,6 +258,11 @@
 
     <footer>
         <p>&copy; 2024 Sound Blasters. Crafted with nature in mind.</p>
+        <div class="social">
+            <a href="https://www.instagram.com/soundblasters.emc/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/soundblasters" target="_blank">Facebook</a>
+            <a href="https://twitter.com/soundblasters" target="_blank">Twitter</a>
+        </div>
     </footer>
 
 </body>
