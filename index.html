@@ -34,6 +34,12 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
+        header img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
         header h1 {
             font-size: 2.5em;
             margin: 0;
@@ -73,6 +79,12 @@
             padding: 60px 20px;
             color: var(--hero-text-color);
             text-align: center;
+        }
+
+        .hero img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -163,6 +175,12 @@
             padding: 20px 0;
         }
 
+        footer img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
         footer p {
             margin: 0;
         }
@@ -202,6 +220,7 @@
 <body>
 
     <header>
+        <img src="path/to/logo.jpg" alt="Sound Blasters Logo">
         <h1>Sound Blasters</h1>
     </header>
 
@@ -215,6 +234,7 @@
     </nav>
 
     <div class="hero">
+        <img src="path/to/logo.jpg" alt="Sound Blasters Logo">
         <h1>Bamboo Sound Amplifiers</h1>
         <p>Experience natural sound amplification with eco-friendly bamboo designs.</p>
         <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Shop Now</button>
@@ -234,7 +254,8 @@
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Shop Now</button>
             </div>
         </section>
-          <section id="gallery">
+
+        <section id="gallery">
             <h2>Gallery</h2>
             <div class="gallery">
                 <img src="Img1.jpg" alt="Bamboo Amplifier Model 1">
@@ -257,6 +278,7 @@
     </main>
 
     <footer>
+        <img src="path/to/logo.jpg" alt="Sound Blasters Logo">
         <p>&copy; 2024 Sound Blasters. Crafted with nature in mind.</p>
         <div class="social">
             <a href="https://www.instagram.com/soundblasters.emc/" target="_blank">Instagram</a>
