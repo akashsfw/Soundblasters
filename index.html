@@ -17,6 +17,10 @@
             --section-bg-color: #ffffff; /* Off-white for sections */
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Nunito', sans-serif;
             margin: 0;
@@ -35,7 +39,7 @@
         }
 
         header img {
-            width: 100px;
+            width: 200px;
             height: auto;
             margin-bottom: 10px;
         }
@@ -70,8 +74,11 @@
             transition: color 0.3s;
         }
 
-        nav ul li a:hover {
+        nav ul li a:hover,
+        nav ul li a:focus {
             color: var(--accent-color);
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
         }
 
         .hero {
@@ -108,9 +115,12 @@
             transition: background-color 0.3s;
         }
 
-        .hero button:hover {
+        .hero button:hover,
+        .hero button:focus {
             background-color: var(--secondary-color);
             color: white;
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
         }
 
         main {
@@ -163,9 +173,12 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .gallery img:hover {
+        .gallery img:hover,
+        .gallery img:focus {
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
         }
 
         footer {
@@ -197,8 +210,11 @@
             transition: color 0.3s;
         }
 
-        footer .social a:hover {
+        footer .social a:hover,
+        footer .social a:focus {
             color: var(--accent-color);
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
         }
 
         button {
@@ -212,8 +228,11 @@
             transition: background-color 0.3s;
         }
 
-        button:hover {
+        button:hover,
+        button:focus {
             background-color: var(--secondary-color);
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -221,15 +240,15 @@
 
     <header>
         <img src="logo1.jpg" alt="Sound Blasters Logo">
-        <h1>Sound Blasters</h1>
+        
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" aria-label="About section">About</a></li>
+            <li><a href="#products" aria-label="Products section">Products</a></li>
+            <li><a href="#gallery" aria-label="Gallery section">Gallery</a></li>
+            <li><a href="#contact" aria-label="Contact section">Contact</a></li>
         </ul>
     </nav>
 
@@ -249,7 +268,7 @@
         <section id="products">
             <h2>Our Products</h2>
             <div class="product">
-                <img src="Amply.jpg" alt="Bamboo Sound Amplifier">
+                <img src="Amply.jpg" alt="Handmade bamboo sound amplifier">
                 <p>Our bamboo sound amplifiers work without electricity, providing clear, amplified sound in any environment. Handmade with sustainable bamboo, they bring both functionality and style to your space.</p>
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Shop Now</button>
             </div>
@@ -258,12 +277,11 @@
         <section id="gallery">
             <h2>Gallery</h2>
             <div class="gallery">
-                <img src="Img1.jpg" alt="Bamboo Amplifier Model 1">
-                <img src="Img2.jpg" alt="Bamboo Amplifier Model 2">
-                <img src="Img3.jpg" alt="Bamboo Amplifier Model 3">
-                <img src="Img4.jpg" alt="Bamboo Amplifier Model 4">
-                <img src="Vid1.gif" alt="Bamboo Amplifier Model 5">
-                <img src="Vid2.gif" alt="Bamboo Amplifier Model 6">
+                <img src="Img1.jpg" alt="Bamboo Amplifier Model 1" loading="lazy">
+                <img src="Img2.jpg" alt="Bamboo Amplifier Model 2" loading="lazy">
+                <img src="Img3.jpg" alt="Bamboo Amplifier Model 3" loading="lazy"><img src="Img4.jpg" alt="Bamboo Amplifier Model 4" loading="lazy">
+                <img src="Vid1.gif" alt="Bamboo Amplifier Model 5 - Animated GIF" loading="lazy">
+                <img src="Vid2.gif" alt="Bamboo Amplifier Model 6 - Animated GIF" loading="lazy">
             </div>
         </section>
 
@@ -272,7 +290,7 @@
             <p>For inquiries, reach us via:</p>
             <div>
                 <p>Email: <a href="mailto:soundblasters.emc@gmail.com">soundblasters.emc@gmail.com</a></p>
-                <p>Instagram: <a href="https://www.instagram.com/soundblasters.emc/" target="_blank">@soundblasters.emc</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/soundblasters.emc/" target="_blank" aria-label="Visit Sound Blasters on Instagram">@soundblasters.emc</a></p>
             </div>
         </section>
     </main>
@@ -281,9 +299,9 @@
         <img src="logo1.jpg" alt="Sound Blasters Logo">
         <p>&copy; 2024 Sound Blasters. Crafted with nature in mind.</p>
         <div class="social">
-            <a href="https://www.instagram.com/soundblasters.emc/" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/soundblasters.emc" target="_blank">Facebook</a>
-            <a href="https://twitter.com/soundblasters.emc" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/soundblasters.emc/" target="_blank" aria-label="Instagram profile">Instagram</a>
+            <a href="https://www.facebook.com/soundblasters.emc" target="_blank" aria-label="Facebook profile">Facebook</a>
+            <a href="https://twitter.com/soundblasters.emc" target="_blank" aria-label="Twitter profile">Twitter</a>
         </div>
     </footer>
 
